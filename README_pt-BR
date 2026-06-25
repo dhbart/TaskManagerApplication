@@ -1,0 +1,195 @@
+# 📋 Task Manager API
+
+API REST desenvolvida em Java com Spring Boot durante o Bootcamp Santander em parceria com a DIO (Digital Innovation One).
+
+O projeto implementa um sistema simples de gerenciamento de tarefas seguindo boas práticas de desenvolvimento, separação de responsabilidades e princípios da Clean Architecture.
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- Java 21
+- Spring Boot 4
+- Spring Web
+- Spring Validation
+- Gradle
+- Lombok
+- REST API
+
+---
+
+## 🏗️ Arquitetura
+
+O projeto foi estruturado em camadas para facilitar manutenção, testes e evolução.
+
+```
+src
+├── application
+│   ├── input
+│   ├── output
+│   └── usecases
+├── domain
+├── infrastructure
+│   ├── http
+│   └── repository
+└── resources
+```
+
+### Camadas
+
+- **Domain**
+    - Contém as regras de negócio.
+    - Entidades, enums, interfaces e exceções.
+
+- **Application**
+    - Casos de uso da aplicação.
+    - Entrada e saída de dados (Input/Output DTOs).
+
+- **Infrastructure**
+    - Controllers REST.
+    - Repositório em memória.
+    - Tratamento global de exceções.
+
+---
+
+## 📌 Funcionalidades
+
+- ✅ Criar tarefa
+- ✅ Buscar tarefa por ID
+- ✅ Listar todas as tarefas
+- ✅ Atualizar uma tarefa
+- ✅ Remover uma tarefa
+
+---
+
+## 📖 Modelo da tarefa
+
+```json
+{
+  "id": "UUID",
+  "title": "Estudar Spring Boot",
+  "description": "Concluir módulo de APIs REST",
+  "status": "PENDING"
+}
+```
+
+### Status disponíveis
+
+- `PENDING`
+- `IN_PROGRESS`
+- `COMPLETED`
+
+---
+
+## 🌐 Endpoints
+
+### Criar tarefa
+
+```http
+POST /tasks
+```
+
+### Listar tarefas
+
+```http
+GET /tasks
+```
+
+### Buscar por ID
+
+```http
+GET /tasks/{id}
+```
+
+### Atualizar tarefa
+
+```http
+PATCH /tasks/{id}
+```
+
+### Remover tarefa
+
+```http
+DELETE /tasks/{id}
+```
+
+---
+
+## ▶️ Executando o projeto
+
+### Pré-requisitos
+
+- Java 21
+- Gradle
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/SEU_USUARIO/task-manager-api.git
+```
+
+Entre na pasta:
+
+```bash
+cd task-manager-api
+```
+
+Execute:
+
+```bash
+./gradlew bootRun
+```
+
+Ou no Windows:
+
+```cmd
+gradlew.bat bootRun
+```
+
+A aplicação ficará disponível em:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 💡 Conceitos praticados
+
+- APIs REST
+- Spring Boot
+- Controllers
+- Validação de dados
+- DTOs
+- Casos de Uso (Use Cases)
+- Clean Architecture
+- Injeção de Dependência
+- Tratamento de exceções
+- Repository Pattern
+
+---
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto foram aplicados conceitos importantes como:
+
+- organização em camadas;
+- separação entre regras de negócio e infraestrutura;
+- criação de APIs REST utilizando Spring Boot;
+- implementação de operações CRUD;
+- utilização de DTOs para comunicação entre camadas;
+- boas práticas de arquitetura para aplicações Java.
+
+---
+
+## 👨‍💻 Autor
+
+**Daniel Henrique Bartholdy**
+
+- LinkedIn: https://www.linkedin.com/in/daniel-bartholdy/
+
+---
+
+## 🎓 Créditos
+
+Projeto desenvolvido durante o **Bootcamp Santander** em parceria com a **Digital Innovation One (DIO)** como parte dos estudos em desenvolvimento backend com Java e Spring Boot.
